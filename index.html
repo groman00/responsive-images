@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Src Set</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    max-width: 100%;
+  }
+  </style>
+</head>
+<body>
+
+  <!--
+
+  Specs: https://newellbrands.atlassian.net/wiki/spaces/NS/pages/603062707/Specs+-+Image+Responsive
+
+  Banner - Hero
+
+  Mobile -
+    Screen sizes: <=320
+    Original size: 640 x 1136
+    Display max width: 320
+    Height: 568
+
+  Tablet -
+    Screen sizes: 321 - 1024
+    Original size: 2048 x 680
+    Display max width: 1024;
+    Height: 340
+
+  Desktop -
+    Screen sizes: >1024
+    Original size: 3840 x 1000
+    Display max width: 1920
+    Height: 500
+
+  -->
+
+  <!-- Use srcset for responsive images that all use the same aspect ratio -->
+  <!-- https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images -->
+  <!-- https://caniuse.com/#feat=srcset -->
+  <!-- <h2>Srcset - Multiple Aspect Ratios</h2>
+  <img
+    srcset="http://via.placeholder.com/640x1136 640w,
+            http://via.placeholder.com/2048x680 2048w,
+            http://via.placeholder.com/3840x1000 3840w"
+    sizes="(max-width: 320px) 320px,
+          (max-width: 1024px) 1024px,
+          1920px"
+    src="http://via.placeholder.com/3840x1000" alt="Src Set Image"> -->
+
+  <!-- <h2>Srcset - Uniform Aspect Ratio</h2>
+  <img
+    srcset="http://via.placeholder.com/640x640 640w,
+            http://via.placeholder.com/2048x2048 2048w,
+            http://via.placeholder.com/3840x3840 3840w"
+    sizes="(max-width: 320px) 320px,
+          (max-width: 1024px) 1024px,
+          1920px"
+    src="http://via.placeholder.com/3840x3840" alt="Src Set Image"> -->
+
+
+  <!-- Use picture for responsive images that change aspect ratio or image -->
+  <!-- https://caniuse.com/#feat=picture -->
+  <!-- <h2>Picture</h2>
+  <picture>
+    <source media="(max-width: 320px)" srcset="http://via.placeholder.com/640x1136">
+    <source media="(max-width: 1024px)" srcset="http://via.placeholder.com/2048x680">
+    <img src="http://via.placeholder.com/3840x1000" alt="Picture Image">
+  </picture> -->
+
+  <!-- Jquery approach. -->
+  <!-- Works on old browsers, but requires custom code. -->
+  <!-- May cause issues with search engines crawling images, but Google should be executing javascript -->
+  <!-- <h2>jQuery</h2>
+  <img
+    class="responsive-image"
+    data-src-mobile="http://via.placeholder.com/640x1136"
+    data-src-tablet="http://via.placeholder.com/2048x680"
+    data-src-desktop="http://via.placeholder.com/3840x1000"
+  />
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="./utils.js"></script>
+  <script src="./responsive.js"></script> -->
+
+</body>
+</html>
